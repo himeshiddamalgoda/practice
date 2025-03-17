@@ -22,7 +22,11 @@ export default function ProgressBar() {
       <div className="w-full h-6 bg-gray-300 rounded mt-20 relative overflow-hidden">
         <div
           className="h-full bg-green-500 transition-all duration-500"
-          style={{ width: `${progress}%`, transform: "scaleX(-1)" }}
+          style={{
+            width: `${100 - progress}%`, 
+            position: 'absolute',
+            right: 0, 
+          }}
         ></div>
       </div>
     </div>
